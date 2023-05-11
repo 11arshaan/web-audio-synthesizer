@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "d3": "^7.8.4",
+    "nanoid": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.62.1"
+    "reactflow": "^11.7.0",
+    "sass": "^1.62.1",
+    "zustand": "^4.3.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

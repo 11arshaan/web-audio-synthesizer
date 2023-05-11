@@ -1,18 +1,16 @@
-import { useState } from 'react';
-import './App.css';
+import { useState, useEffect, useRef } from "react";
+import "./App.css";
+import { ReactFlowProvider } from 'reactflow';
 
-import Waapi from './components/Waapi/Waapi';
-import NodeGraph from './components/NodeGraph/NodeGraph';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <div className='app'>
-    {/* <NodeGraph /> */}
-    <Waapi />
+    <div className="app">
+      <ReactFlowProvider>
+        <h1>React Flow</h1>
+      </ReactFlowProvider>
     </div>
-  )
 }
 
-export default App
+export default App;
