@@ -40,3 +40,26 @@
   display: inline-block;
   margin: 0 0.5rem;
 }
+
+.oscilloscope-canvas {
+  // border: 1px solid black;  
+  width: 300px;
+  height: 30px;
+}
+
+.react-flow{
+  background-image: linear-gradient(
+  0deg,
+  hsl(196deg 55% 8%) 0%,
+  hsl(196deg 49% 9%) 16%,
+  hsl(195deg 46% 9%) 30%,
+  hsl(194deg 44% 10%) 43%,
+  hsl(193deg 42% 11%) 55%,
+  hsl(192deg 40% 12%) 66%,
+  hsl(190deg 37% 13%) 75%,
+  hsl(189deg 35% 13%) 84%,
+  hsl(188deg 34% 14%) 91%,
+  hsl(186deg 32% 15%) 96%,
+  hsl(185deg 30% 16%) 100%
+);
+}

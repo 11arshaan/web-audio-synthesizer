@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
+import {useRef} from "react";
 import { Handle } from "reactflow";
 import { useStore } from "../../store/store.js";
 import { shallow } from "zustand/shallow";
+import Oscilloscope from "./Oscilloscope.jsx";
+
 
 const selector = (id) => (store) => ({
   setFrequency: (e) => store.updateNode(id, { frequency: +e.target.value }),
@@ -10,10 +13,10 @@ const selector = (id) => (store) => ({
 
 export default function Osc({ id, data }) {
 const { setFrequency, setType } = useStore(selector(id), shallow);
-
+const container = useRef(null);
 
   return (
-    <div className="demo-node">
+    <div ref={container} className="demo-node">
       <div className="demo-node-inside">
         <p>Oscillator</p>
 
@@ -40,6 +43,7 @@ const { setFrequency, setType } = useStore(selector(id), shallow);
             <option value="square">square</option>
           </select>
         </label>
+
       </div>
 
       <Handle type="source" position="bottom" />

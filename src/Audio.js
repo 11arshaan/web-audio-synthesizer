@@ -43,6 +43,13 @@ export function createAudioNode(id, type, data) {
       node = audioContext.destination;
       break;
 
+      case "scope":
+        node = audioContext.createAnalyser();
+        node.fftSize = 2048;
+        node.smoothingTimeConstant = 1;
+        node.type = "scope";
+        break;
+
     default:
       break;
   }
@@ -87,4 +94,8 @@ export function disconnect(sourceId, targetId) {
 
   source.disconnect(target);
 }
+
+
+export {audioNodes};
+export {audioContext};
 

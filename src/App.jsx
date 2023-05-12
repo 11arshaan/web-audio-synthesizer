@@ -8,11 +8,13 @@ import { useStore } from "./store/store.js";
 import Osc from "./nodes/Oscillator/Osc.jsx";
 import Gain from "./nodes/Gain/Gain.jsx";
 import Out from "./nodes/Out/Out";
+import ScopeAnalyser from "./nodes/Scope Analyser/ScopeAnalyser";
 
 const nodeTypes = {
   osc: Osc,
   gain: Gain,
   out: Out,
+  scope: ScopeAnalyser
 };
 
 const selector = (store) => ({
@@ -63,6 +65,17 @@ function App() {
             }
           >
             amp
+          </button>
+          <button
+            onClick={() =>
+              store.createNode({
+                type: "scope",
+                position: { x: 0, y: 0 },
+                data: {},
+              })
+            }
+          >
+            scope
           </button>
         </Panel>
         <Background />
