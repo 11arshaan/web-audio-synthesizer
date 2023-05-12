@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Handle } from "reactflow";
 import { useStore } from "../../store/store.js";
 import { shallow } from "zustand/shallow";
 
+//use a higher-order function to be able to select specific nodes
 const selector = (id) => (store) => ({
   setGain: (e) => store.updateNode(id, { gain: +e.target.value }),
 });

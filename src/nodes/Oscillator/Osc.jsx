@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Handle } from "reactflow";
 import { useStore } from "../../store/store.js";
 import { shallow } from "zustand/shallow";
